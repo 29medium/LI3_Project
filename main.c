@@ -1,27 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "vendas.h"
-#include "arr.h"
+#include "headers.h"
 
-// Evitar scanf ou fscanf. Usar fgets e depois usar sscanf
-// strtok ou strsep
-// Iniciar sempre algum apontador com o seu valor ou com NULL
-
-char*** clientes = NULL;
-char** produtos;
+char** clientes = NULL;
+char** produtos = NULL;
+char* buffer = NULL;
+Sales* vendas = NULL;
 
 int main(){
-  char* line = malloc(sizeof(char) * 40);
-  Sales* vendas = NULL;
 
-  arrclientes(clientes);
-  //for(int i = 0; i < 10000;i++) printf("%s\n",*clientes[i]);
+  //arrclientes(clientes);
+  arrprodutos(produtos);
 
-  //arrprodutos(produtos);
-  //for(int i = 0; i < 10;i++) printf("%s\n",produtos[i]);
+  //for(int i = 0; i < 16383;i++) printf("%s\n",clientes[i]);
+  for(int i = 0; i < 10;i++) printf("%s\n",produtos[i]);
 
-  //salesToA(line);
+  //salesToA(buffer, vendas, clientes, produtos);
 
   return 0;
 }

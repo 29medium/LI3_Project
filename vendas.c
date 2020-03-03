@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "vendas.h"
+#include "headers.h"
 
 int prodOK(char prod[]){
   int r=0;
