@@ -8,18 +8,18 @@
 // strtok ou strsep
 // Iniciar sempre algum apontador com o seu valor ou com NULL
 
-char** clientes;
+char*** clientes = NULL;
 char** produtos;
 
 int main(){
   char* line = malloc(sizeof(char) * 40);
   Sales* vendas = NULL;
 
-  //arrclientes(clientes);
-  //for(int i = 0; i < 200000;i++) printf("%s\n",clientes[i]);
+  arrclientes(clientes);
+  //for(int i = 0; i < 10000;i++) printf("%s\n",*clientes[i]);
 
-  arrprodutos(produtos);
-  for(int i = 0; i < 10;i++) printf("%s\n",produtos[i]);
+  //arrprodutos(produtos);
+  //for(int i = 0; i < 10;i++) printf("%s\n",produtos[i]);
 
   //salesToA(line);
 

@@ -2,7 +2,40 @@
 #include <stdlib.h>
 #include <string.h>
 
-void arrclientes(char** arr)
+void arrclientes(char*** arr)
+{
+  FILE* clientes = fopen("./Files/Clientes.txt", "r");
+
+  char linha[8];
+  int used, size=1, i, l;
+
+  for(used=0; fgets(linha,9,clientes); used++)
+  {
+    linha[5] = '\0';
+
+    if(used == 0.8*size){
+      *arr = realloc(*arr,((size+1)*2) * sizeof(char*));
+      size = (size+1)*2;
+    }
+
+    *arr[used] = malloc(6 * sizeof(char));
+
+    for(i=0; strcmp(linha,*arr[i])>0 && i<used; i++);
+
+    for(l=used; l>i; l--)
+      strcpy(*arr[l],*arr[l-1]);
+
+    strcpy(*arr[i],linha);
+
+  }
+
+  //for(int i = 0; i < used;i++) printf("%s\n",arr[i]);
+
+  fclose(clientes);
+}
+
+/*
+void arrclientes(char*** arr)
 {
   FILE *clientes;
   clientes = fopen("./Files/Clientes.txt", "r");
@@ -34,10 +67,13 @@ void arrclientes(char** arr)
     }
   }
 
-  for(int i = 0; i < 200000;i++) printf("%s\n",arr[i]);
+  //for(int i = 0; i < size;i++) printf("%s\n",arr[i]);
 
   fclose(clientes);
+
+  return arr;
 }
+*/
 
 void arrprodutos(char** arr)
 {
