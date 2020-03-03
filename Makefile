@@ -14,4 +14,4 @@ sort.o: sort.c headers.h
 	gcc -g -c sort.c
 
 clean:
-	rm -f main.o vendas.o arr.o main
+	rm -f main.o vendas.o arr.o sort.o main
