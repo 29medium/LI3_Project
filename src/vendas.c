@@ -1,48 +1,17 @@
 #include "headers.h"
 
-int prodOK(char prod[]){
-  int r=0;
-  FILE* fprod = fopen("Produtos.txt", "r");
-  char line[40];
-
-  while(fgets(line, 41, fprod) && r==0){
-    line[strlen(line)-2]='\0';
-    if(strcmp(line,prod)==0)
-      r=1;
-  }
-
-  fclose(fprod);
-
-  return r;
-}
-
-int costOK(char cost[]){
-  int r=0;
-  FILE* fcost = fopen("Clientes.txt", "r");
-  char line[40];
-
-  while(fgets(line, 41, fcost) && r==0){
-    line[strlen(line)-2]='\0';
-    if(strcmp(line,cost)==0)
-      r=1;
-  }
-
-  fclose(fcost);
-
-  return r;
-}
-
-int salesOK(char sales[]){
+int salesOK(char* buffer, char** clientes, int ncli, char** produtos, int nprod)
+{
   int i, r=1, val=0;
   double val2=0;
-  char *s;
+  char* s;
 
-  for(i=0;(s = strsep(&sales, " ")) && r && i < 7;i++)
+  for(i=0;(s = strsep(&buffer, " ")) && r && i < 7;i++)
   {
     switch (i)
     {
       case 0:
-        if(!prodOK(s))
+        if(binarySearch(produtos, s, 0, nprod) >= 0)
           r=0;
         break;
 
@@ -58,7 +27,7 @@ int salesOK(char sales[]){
         break;
 
       case 4:
-        if(!costOK(s))
+        if(binarySearch(clientes, s, 0, ncli) >= 0)
           r=0;
         break;
 
@@ -73,25 +42,20 @@ int salesOK(char sales[]){
   return r;
 }
 
-void toA() {
-  printf("Done");
-}
-
-int salesToA(char* line, Sales* vendas)
+void salesToA(Sales* s, char** clientes, int ncli, char** produtos, int nprod)
 {
   FILE* fsales = fopen("Vendas_1M.txt", "r");
+  char* buffer = malloc(sizeof(char) * 29);
 
-  int i=0;
-
-  while(fgets(line, 41, fsales))
+  while(fgets(buffer, 30, fsales))
   {
-    line[strlen(line)-2]='\0';
-    if(salesOK(line))
-      toA();
-    i++;
+    /*
+    buffer[strlen(buffer)-2]='\0';
+
+    if(salesOK(buffer, clientes, ncli, produtos, nprod))
+      puts(".");
+    */
   }
 
   fclose(fsales);
-
-  return 0;
 }

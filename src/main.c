@@ -2,20 +2,19 @@
 
 char** clientes = NULL;
 char** produtos = NULL;
-char* buffer = NULL;
-Sales* vendas = NULL;
+Sales* s = NULL;
 
 int main()
 {
-  //arrclientes(clientes);
-  arrprodutos(produtos);
+  int ncli, nprod;
 
-  //for(int i = 0; i < 16383;i++) printf("%s\n",clientes[i]);
+  clientes = malloc(sizeof(char*) * 16383);
+  produtos = malloc(sizeof(char*) * 171008);
 
-  for(int i = 0; i < 171008;i++)
-    printf("%s\n",produtos[i]);
+  ncli = arrclientes(clientes);
+  nprod = arrprodutos(produtos);
 
-  //salesToA(buffer, vendas, clientes, produtos);
+  salesToA(s, clientes, ncli, produtos, nprod);
 
   return 0;
 }
