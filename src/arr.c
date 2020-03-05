@@ -1,45 +1,47 @@
 #include "headers.h"
 
-int arrclientes(char** arr)
+void arrclientes(ARR* cli)
 {
-  FILE* clientes = fopen("../files/Clientes.txt", "r");
-
-  char* buffer = malloc(sizeof(char) * 8);
+  FILE* fcli = fopen("../files/Clientes.txt", "r");
+  char* buffer= malloc(sizeof(char) * 8);
   int used;
 
-  for(used=0; fgets(buffer,9,clientes); used++)
-  {
-    buffer[strlen(buffer)-2] = '\0';
+  cli->list = malloc(sizeof(char*) * 16384);
 
-    arr[used] = malloc(6 * sizeof(char));
-    strcpy(arr[used],buffer);
+  for(used=0; fgets(buffer,9,fcli); used++)
+  {
+    buffer = strsep(&buffer, "\r");
+
+    cli->list[used] = malloc(6 * sizeof(char));
+    strcpy(cli->list[used],buffer);
   }
 
-  quickSort(arr, 0, used-1);
+  cli->used = used;
 
-  fclose(clientes);
+  quickSort(cli->list, 0, used - 1);
 
-  return used;
+  fclose(fcli);
 }
 
-int arrprodutos(char** arr)
+void arrprodutos(ARR* prod)
 {
-  FILE *produtos = fopen("../files/Produtos.txt", "r");
-
-  char* buffer = malloc(sizeof(char) * 8);
+  FILE *fprod = fopen("../files/Produtos.txt", "r");
+  char* buffer= malloc(sizeof(char) * SMAX);
   int used;
 
-  for(used=0; fgets(buffer,9,produtos); used++)
-  {
-    buffer[strlen(buffer)-2] = '\0';
+  prod->list = malloc(sizeof(char*) * 171008);
 
-    arr[used] = malloc(8 * sizeof(char));
-    strcpy(arr[used],buffer);
+  for(used=0; fgets(buffer,SMAX,fprod); used++)
+  {
+    buffer = strsep(&buffer, "\r");
+
+    prod->list[used] = malloc(8 * sizeof(char));
+    strcpy(prod->list[used],buffer);
   }
 
-  quickSort(arr, 0, used-1);
+  prod->used = used;
 
-  fclose(produtos);
+  quickSort(prod->list, 0, used - 1);
 
-  return used;
+  fclose(fprod);
 }

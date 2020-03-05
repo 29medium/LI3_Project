@@ -1,20 +1,15 @@
 #include "headers.h"
 
-char** clientes = NULL;
-char** produtos = NULL;
-Sales* s = NULL;
+ARR cli;
+ARR prod;
+SALES s;
 
 int main()
 {
-  int ncli, nprod;
+  arrclientes(&cli);
+  arrprodutos(&prod);
 
-  clientes = malloc(sizeof(char*) * 16383);
-  produtos = malloc(sizeof(char*) * 171008);
-
-  ncli = arrclientes(clientes);
-  nprod = arrprodutos(produtos);
-
-  salesToA(s, clientes, ncli, produtos, nprod);
+  salesToA(&s, &cli, &prod);
 
   return 0;
 }
