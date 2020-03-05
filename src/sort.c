@@ -35,20 +35,22 @@ void quickSort(char** arr, int low, int high)
     }
 }
 
-int binarySearch(char** arr, char* code, int low, int high)
+int binarySearch(char** arr, char* code, int left, int right)
 {
-    if (high >= low)
-    {
-        int mid = low + (high - low) / 2;
+  int mid, res=(-1);
 
-        if (strcmp(arr[mid], code) == 0)
-            return mid;
+  while (left<=right && res==(-1))
+  {
+    mid = left + (right-left)/2;
 
-        if (strcmp(arr[mid], code) > 0)
-            return binarySearch(arr, code, low, mid - 1);
+    if (strcmp(arr[mid], code) == 0)
+        res = mid;
 
-        else return binarySearch(arr, code, mid + 1, high);
-    }
+    if (strcmp(arr[mid], code) < 0)
+        left = mid + 1;
 
-    return -1;
+    else right = mid - 1;
+  }
+
+  return res;
 }
