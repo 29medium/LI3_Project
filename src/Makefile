@@ -7,7 +7,7 @@ CFLAGS = -O3 -Wall -g -I$(IDIR)
 _DEPS = headers.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o sales.o arr.o sort.o
+_OBJ = main.o sales.o arr.o sort.o tests.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)

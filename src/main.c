@@ -2,16 +2,19 @@
 
 ARR cli;
 ARR prod;
-SALES s;
+SALES val;
+SALES nval;
 
 int main()
 {
   arrclientes(&cli);
   arrprodutos(&prod);
 
-  salesToA(&s, &cli, &prod);
+  salesToA(&val, &nval, &cli, &prod);
 
-  salesToF(&s);
+  salesToF(&val);
+
+  tests(&val, &nval, &cli, &prod);
 
   return 0;
 }
