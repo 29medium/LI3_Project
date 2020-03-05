@@ -4,14 +4,16 @@
 void arrclientes(ARR* cli)
 {
   FILE* fcli = fopen("../files/Clientes.txt", "r");
-  char* buffer= malloc(sizeof(char) * 8);
+  char* buffer= malloc(sizeof(char) * SMAX);
   int used;
 
-  cli->list = malloc(sizeof(char*) * 16384);
+  //cli->list = malloc(sizeof(char*) * 16384);
 
-  for(used=0; fgets(buffer,9,fcli); used++)
+  for(used=0; fgets(buffer,SMAX,fcli); used++)
   {
     buffer = strsep(&buffer, "\r");
+
+    cli->list = realloc(cli->list,sizeof(char*) * (used + 1));
 
     cli->list[used] = malloc(6 * sizeof(char));
     strcpy(cli->list[used],buffer);
@@ -31,11 +33,13 @@ void arrprodutos(ARR* prod)
   char* buffer= malloc(sizeof(char) * SMAX);
   int used;
 
-  prod->list = malloc(sizeof(char*) * 171008);
+  //prod->list = malloc(sizeof(char*) * 171008);
 
   for(used=0; fgets(buffer,SMAX,fprod); used++)
   {
     buffer = strsep(&buffer, "\r");
+
+    prod->list = realloc(prod->list,sizeof(char*) * (used + 1));
 
     prod->list[used] = malloc(8 * sizeof(char));
     strcpy(prod->list[used],buffer);

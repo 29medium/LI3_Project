@@ -9,7 +9,6 @@ void salesOK(SALES* val, SALES* nval, ARR* cli, ARR* prod, char* buffer)
 
   aux = strsep(&buffer, " ");
   p = aux;
-  printf("%s\n", p);
 
   aux = strsep(&buffer, " ");
   price = atof(aux);
@@ -29,6 +28,8 @@ void salesOK(SALES* val, SALES* nval, ARR* cli, ARR* prod, char* buffer)
   aux = strsep(&buffer, " ");
   branch = atoi(aux);
 
+  nval->list = realloc(nval->list,sizeof(SALE) * (nval -> used + 1));
+
   nval->list[nval->used].p = p;
   nval->list[nval->used].price = price;
   nval->list[nval->used].uni = uni;
@@ -40,6 +41,7 @@ void salesOK(SALES* val, SALES* nval, ARR* cli, ARR* prod, char* buffer)
 
   if((binarySearch(prod->list, p, 0, prod->used)!=(-1)) && (binarySearch(cli->list, c, 0, cli->used)!=(-1)))
   {
+    val->list = realloc(val->list,sizeof(SALE) * (val -> used + 1));
     val->list[val->used].p = p;
     val->list[val->used].price = price;
     val->list[val->used].uni = uni;
@@ -57,10 +59,8 @@ void salesToA(SALES* val, SALES* nval, ARR* cli, ARR* prod)
   FILE* fsales = fopen("../files/Vendas_1M.txt", "r");
   char* buffer = malloc(sizeof(char) * MAX);
 
-  val->list = malloc(sizeof(SALE) * 891108);
   val->used = 0;
 
-  nval->list = malloc(sizeof(SALE) * 1000000);
   nval->used = 0;
 
   while(fgets(buffer, MAX, fsales))

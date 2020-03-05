@@ -33,6 +33,8 @@ typedef struct sales{
 
 // Functions
 
+void tests(SALES* val, SALES* nval, ARR* cli, ARR* prod);
+
 void quickSort(char* arr[], int low, int high);
 int binarySearch(char** arr, char* code, int low, int high);
 

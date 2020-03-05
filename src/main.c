@@ -12,6 +12,8 @@ int main()
 
   salesToA(&val, &nval, &cli, &prod);
 
+  //for(int i = 0;i < val.used; i++) printf("%f\n", val.list[i].price);
+
   salesToF(&val);
 
   tests(&val, &nval, &cli, &prod);

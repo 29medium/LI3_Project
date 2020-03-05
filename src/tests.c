@@ -13,7 +13,7 @@ int salesBranch1(SALES* val)
   return count;
 }
 
-int tests(SALES* val, SALES* nval, ARR* cli, ARR* prod)
+void tests(SALES* val, SALES* nval, ARR* cli, ARR* prod)
 {
   //salesBranch1(val);
 }
