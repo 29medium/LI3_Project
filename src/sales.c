@@ -1,5 +1,6 @@
 #include "headers.h"
 
+// Corre uma venda e se for válida passa para a próxima posição livre do array
 void salesOK(SALES* s, ARR* cli, ARR* prod, char* buffer)
 {
   char *aux = NULL, *p = NULL, *type = NULL, *c = NULL;
@@ -35,6 +36,7 @@ void salesOK(SALES* s, ARR* cli, ARR* prod, char* buffer)
   }
 }
 
+// Abre o ficheiro das vendas, corre todas as vendas e passa as vendas válidas para um array
 void salesToA(SALES* s, ARR* cli, ARR* prod)
 {
   FILE* fsales = fopen("../files/Vendas_1M.txt", "r");
@@ -50,9 +52,24 @@ void salesToA(SALES* s, ARR* cli, ARR* prod)
     salesOK(s, cli, prod, buffer);
   }
 
-  printf("%d\n", s->used);
-
   fclose(fsales);
 }
 
-void salesToF(SALES* s) {}
+// Passa todas as vendas válidas do array para um ficheiro
+void salesToF(SALES* s)
+{
+  FILE* fsalesv = fopen("../files/Vendas_1MValidas.txt", "w");
+
+  for(int i=0; i<s->used; i++){
+    fprintf(fsalesv, "%s %f %d %s %s %d %d\r\n",
+    s->list[i].p,
+    s->list[i].price,
+    s->list[i].uni,
+    s->list[i].type,
+    s->list[i].c,
+    s->list[i].month,
+    s->list[i].branch);
+  }
+
+  fclose(fsalesv);
+}

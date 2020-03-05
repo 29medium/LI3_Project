@@ -1,5 +1,6 @@
 #include "headers.h"
 
+// Abre o ficheiro dos clientes e passa-os todos para um array
 void arrclientes(ARR* cli)
 {
   FILE* fcli = fopen("../files/Clientes.txt", "r");
@@ -23,6 +24,7 @@ void arrclientes(ARR* cli)
   fclose(fcli);
 }
 
+// Abre o ficheiro dos produtos e passa-os todos para um array
 void arrprodutos(ARR* prod)
 {
   FILE *fprod = fopen("../files/Produtos.txt", "r");

@@ -19,3 +19,4 @@ exe: $(OBJ)
 clean:
 	rm -f obj/*.o
 	rm -f exe
+	rm -f ..file/Vendas_1MValidas.txt
