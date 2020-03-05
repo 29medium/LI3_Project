@@ -2,38 +2,32 @@
 
 void salesOK(SALES* s, ARR* cli, ARR* prod, char* buffer)
 {
-  char* aux = NULL;
-  char p[SMAX], type[2], c[SMAX];
+  char *aux = NULL, *p = NULL, *type = NULL, *c = NULL;
   float price;
   int uni, month, branch;
 
   aux = strsep(&buffer, " ");
-  strcpy(p, aux);
+  p = strdup(aux);
   aux = strsep(&buffer, " ");
   price = atof(aux);
   aux = strsep(&buffer, " ");
   uni = atoi(aux);
   aux = strsep(&buffer, " ");
-  strcpy(type, aux);
+  type = strdup(aux);
   aux = strsep(&buffer, " ");
-  strcpy(c, aux);
+  c = strdup(aux);
   aux = strsep(&buffer, " ");
   month = atoi(aux);
   aux = strsep(&buffer, " ");
   branch = atoi(aux);
 
-
   if((binarySearch(prod->list, p, 0, prod->used)!=(-1)) && (binarySearch(cli->list, c, 0, cli->used)!=(-1)))
   {
-    s->list[s->used].p = malloc(sizeof(char) * SMAX);
-    s->list[s->used].type = malloc(sizeof(char) * 2);
-    s->list[s->used].c = malloc(sizeof(char) * 2);
-
-    strcpy(s->list[s->used].p, p);
+    s->list[s->used].p = p;
     s->list[s->used].price = price;
     s->list[s->used].uni = uni;
-    strcpy(s->list[s->used].type, type);
-    strcpy(s->list[s->used].c, c);
+    s->list[s->used].type = type;
+    s->list[s->used].c = c;
     s->list[s->used].month = month;
     s->list[s->used].branch = branch;
 
@@ -45,7 +39,6 @@ void salesToA(SALES* s, ARR* cli, ARR* prod)
 {
   FILE* fsales = fopen("../files/Vendas_1M.txt", "r");
   char* buffer = malloc(sizeof(char) * MAX);
-  int i = 0;
 
   s->list = malloc(sizeof(SALE) * 891108);
   s->used = 0;
@@ -57,5 +50,9 @@ void salesToA(SALES* s, ARR* cli, ARR* prod)
     salesOK(s, cli, prod, buffer);
   }
 
+  printf("%d\n", s->used);
+
   fclose(fsales);
 }
+
+void salesToF(SALES* s) {}

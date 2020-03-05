@@ -11,5 +11,7 @@ int main()
 
   salesToA(&s, &cli, &prod);
 
+  salesToF(&s);
+
   return 0;
 }

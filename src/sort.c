@@ -12,7 +12,7 @@ int partition (char** arr, int low, int high)
     char* pivot = arr[high];
     int i = (low - 1);
 
-    for (int j = low; j <= high- 1; j++)
+    for (int j=low; j<=high-1; j++)
     {
         if (strcmp(arr[j], pivot) < 0)
         {
