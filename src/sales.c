@@ -1,92 +1,72 @@
 #include "headers.h"
 
-// Corre uma venda e se for válida passa para a próxima posição livre do array
-void salesOK(SALES* val, SALES* nval, ARR* cli, ARR* prod, char* buffer)
+// Corre uma venda, passa para a struct total e se for válida passa a struct valida
+void saleS(SALES* s, ARR* cli, ARR* prod, char* buffer)
 {
-  char *aux = NULL, *p = NULL, *type = NULL, *c = NULL;
-  float price;
-  int uni, month, branch;
+  char *aux = NULL;
+
+  s->listT = realloc(s->listT,sizeof(SALE) * (s->usedT + 1));
 
   aux = strsep(&buffer, " ");
-  p = aux;
+  s->listT[s->usedT].p = aux;
 
   aux = strsep(&buffer, " ");
-  price = atof(aux);
+  s->listT[s->usedT].price = atof(aux);
 
   aux = strsep(&buffer, " ");
-  uni = atoi(aux);
+  s->listT[s->usedT].uni = atoi(aux);
 
   aux = strsep(&buffer, " ");
-  type = aux;
+  s->listT[s->usedT].type = aux;
 
   aux = strsep(&buffer, " ");
-  c = aux;
+  s->listT[s->usedT].c = aux;
 
   aux = strsep(&buffer, " ");
-  month = atoi(aux);
+  s->listT[s->usedT].month = atoi(aux);
 
   aux = strsep(&buffer, " ");
-  branch = atoi(aux);
+  s->listT[s->usedT].branch = atoi(aux);
 
-  nval->list = realloc(nval->list,sizeof(SALE) * (nval -> used + 1));
-
-  nval->list[nval->used].p = p;
-  nval->list[nval->used].price = price;
-  nval->list[nval->used].uni = uni;
-  nval->list[nval->used].type = type;
-  nval->list[nval->used].c = c;
-  nval->list[nval->used].month = month;
-  nval->list[nval->used].branch = branch;
-  nval->used++;
-
-  if((binarySearch(prod->list, p, 0, prod->used)!=(-1)) && (binarySearch(cli->list, c, 0, cli->used)!=(-1)))
+  if((binarySearch(prod->list, s->listT[s->usedT].p, 0, prod->used)!=(-1)) && (binarySearch(cli->list, s->listT[s->usedT].c, 0, cli->used)!=(-1)))
   {
-    val->list = realloc(val->list,sizeof(SALE) * (val -> used + 1));
-    val->list[val->used].p = p;
-    val->list[val->used].price = price;
-    val->list[val->used].uni = uni;
-    val->list[val->used].type = type;
-    val->list[val->used].c = c;
-    val->list[val->used].month = month;
-    val->list[val->used].branch = branch;
-    val->used++;
+    s->listV = realloc(s->listV,sizeof(SALE) * (s->usedV + 1));
+
+    s->listV[s->usedV].p = s->listT[s->usedT].p;
+    s->listV[s->usedV].price = s->listT[s->usedT].price;
+    s->listV[s->usedV].uni = s->listT[s->usedT].uni;
+    s->listV[s->usedV].type = s->listT[s->usedT].type;
+    s->listV[s->usedV].c = s->listT[s->usedT].c;
+    s->listV[s->usedV].month = s->listT[s->usedT].month;
+    s->listV[s->usedV].branch = s->listT[s->usedT].branch;
+    s->usedV++;
   }
 }
 
-// Abre o ficheiro das vendas, corre todas as vendas e passa as vendas válidas para um array
-void salesToA(SALES* val, SALES* nval, ARR* cli, ARR* prod)
+// Abre o array das vendas e passa-as para uma struct
+void salesToS(SALES* s, ARR* cli, ARR* prod, ARR* sales)
 {
-  FILE* fsales = fopen("../files/Vendas_1M.txt", "r");
-  char* buffer = malloc(sizeof(char) * MAX);
+  s->usedV = 0;
+  s->usedT = 0;
 
-  val->used = 0;
-
-  nval->used = 0;
-
-  while(fgets(buffer, MAX, fsales))
-  {
-    buffer = strsep(&buffer, "\r");
-
-    salesOK(val, nval, cli, prod, buffer);
-  }
-
-  fclose(fsales);
+  for(int i=0; i<sales->used; i++)
+    saleS(s, cli, prod, sales->list[i]);
 }
 
 // Passa todas as vendas válidas do array para um ficheiro
-void salesToF(SALES* val)
+void salesToF(SALES* s)
 {
   FILE* fsalesv = fopen("../files/Vendas_1MValidas.txt", "w");
 
-  for(int i=0; i<val->used; i++){
+  for(int i=0; i<s->usedV; i++){
     fprintf(fsalesv, "%s %f %d %s %s %d %d\r\n",
-    val->list[i].p,
-    val->list[i].price,
-    val->list[i].uni,
-    val->list[i].type,
-    val->list[i].c,
-    val->list[i].month,
-    val->list[i].branch);
+    s->listV[i].p,
+    s->listV[i].price,
+    s->listV[i].uni,
+    s->listV[i].type,
+    s->listV[i].c,
+    s->listV[i].month,
+    s->listV[i].branch);
   }
 
   fclose(fsalesv);

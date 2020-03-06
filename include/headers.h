@@ -16,7 +16,7 @@ typedef struct arr{
   char** list;
 } ARR;
 
-typedef struct sale{
+typedef struct selling{
   char* p;
   float price;
   int uni;
@@ -26,22 +26,23 @@ typedef struct sale{
   int branch;
 } SALE;
 
-typedef struct sales{
-  int used;
-  SALE* list;
+typedef struct sellings{
+  int usedV;
+  int usedT;
+  SALE* listV;
+  SALE* listT;
 } SALES;
 
 // Functions
 
-void tests(SALES* val, SALES* nval, ARR* cli, ARR* prod);
+void tests(SALES* s, ARR* cli, ARR* prod, ARR* sales);
 
 void quickSort(char* arr[], int low, int high);
 int binarySearch(char** arr, char* code, int low, int high);
 
-int salesBranch1(SALES* val);
-
 void arrclientes(ARR* cli);
 void arrprodutos(ARR* prod);
+void arrsales(ARR* sales);
 
-void salesToA(SALES* val, SALES* nval, ARR* cli, ARR *prod);
+void salesToS(SALES* s, ARR* cli, ARR* prod, ARR* sales);
 void salesToF(SALES* val);

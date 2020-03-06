@@ -2,21 +2,19 @@
 
 ARR cli;
 ARR prod;
-SALES val;
-SALES nval;
+ARR sales;
+SALES s;
 
 int main()
 {
   arrclientes(&cli);
   arrprodutos(&prod);
+  arrsales(&sales);
 
-  salesToA(&val, &nval, &cli, &prod);
+  salesToS(&s, &cli, &prod, &sales);
+  salesToF(&s);
 
-  //for(int i = 0;i < val.used; i++) printf("%f\n", val.list[i].price);
-
-  salesToF(&val);
-
-  tests(&val, &nval, &cli, &prod);
+  tests(&s, &cli, &prod, &sales);
 
   return 0;
 }
