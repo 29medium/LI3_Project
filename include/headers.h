@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 // Define
 
@@ -15,6 +16,16 @@ typedef struct arr{
   int used;
   char** list;
 } ARR;
+
+typedef struct produto{
+  int validade;
+  char *nome;
+}Prod;
+
+typedef struct tHash {
+  int size;
+  Prod *list;
+}THash;
 
 typedef struct selling{
   char* p;
@@ -43,6 +54,7 @@ int binarySearch(char** arr, char* code, int low, int high);
 void arrclientes(ARR* cli);
 void arrprodutos(ARR* prod);
 void arrsales(ARR* sales);
+void TabelaHash(ARR *a,THash *t,int tipo);
 
 void salesToS(SALES* s, ARR* cli, ARR* prod, ARR* sales);
 void salesToF(SALES* val);

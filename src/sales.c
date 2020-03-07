@@ -41,9 +41,11 @@ void saleS(SALES* s, ARR* cli, ARR* prod, char* buffer)
     s->listV[s->usedV].branch = s->listT[s->usedT].branch;
     s->usedV++;
   }
+  
 }
 
 // Abre o array das vendas e passa-as para uma struct
+
 void salesToS(SALES* s, ARR* cli, ARR* prod, ARR* sales)
 {
   s->usedV = 0;
