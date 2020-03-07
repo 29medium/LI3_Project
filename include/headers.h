@@ -1,32 +1,34 @@
-// Include
-
+// INCLUDE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-// Define
 
+// DEFINE
 #define MAX 64
 #define SMAX 10
 
-// Structs
 
+// STRUCTS
+// Struct para array de vendas, produtos ou clientes
 typedef struct arr{
   int used;
   char** list;
 } ARR;
 
+// Structs para tabelas de hash do 4
 typedef struct produto{
   int validade;
   char *nome;
 }Prod;
 
-typedef struct tHash {
+typedef struct tHash4{
   int size;
   Prod *list;
-}THash;
+}THash4;
 
+// Struct que suporta uma venda
 typedef struct selling{
   char* p;
   float price;
@@ -37,6 +39,7 @@ typedef struct selling{
   int branch;
 } SALE;
 
+// Struct que suporta duas listas de vendas
 typedef struct sellings{
   int usedV;
   int usedT;
@@ -44,17 +47,23 @@ typedef struct sellings{
   SALE* listT;
 } SALES;
 
-// Functions
 
-void tests(SALES* s, ARR* cli, ARR* prod, ARR* sales);
-
+// FUNCTIONS
+// sort.c
 void quickSort(char* arr[], int low, int high);
 int binarySearch(char** arr, char* code, int low, int high);
 
+// arr.c
 void arrclientes(ARR* cli);
 void arrprodutos(ARR* prod);
 void arrsales(ARR* sales);
-void TabelaHash(ARR *a,THash *t,int tipo);
 
+// hash.c
+void TabelaHash4(ARR *a,THash4 *t,int tipo);
+
+// sales.c
 void salesToS(SALES* s, ARR* cli, ARR* prod, ARR* sales);
 void salesToF(SALES* val);
+
+// teste.c
+void tests(SALES* s, ARR* cli, ARR* prod, ARR* sales);

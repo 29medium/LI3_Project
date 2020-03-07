@@ -1,4 +1,5 @@
 #include "headers.h"
+
 int clienteValido(char *cliente) {
   if(strlen(cliente) < 5 || cliente[0] < 'A' || cliente[0] > 'Z' || cliente[1] < '1' || cliente[1] > '5') return 0;
   for(int i = 2;i < 5;i++)
@@ -31,17 +32,17 @@ void arrclientes(ARR* cli)
     buffer = strsep(&buffer, "\r");
 
     if(clienteValido(buffer)) {
-    cli->list = realloc(cli->list,sizeof(char*) * (used + 1));
+      cli->list = realloc(cli->list,sizeof(char*) * (used + 1));
 
-    cli->list[used] = malloc(SMAX * sizeof(char));
-    strcpy(cli->list[used],buffer);
-    used++;
+      cli->list[used] = malloc(SMAX * sizeof(char));
+      strcpy(cli->list[used],buffer);
+      used++;
     }
   }
 
   cli->used = used;
 
-  //quickSort(cli->list, 0, used - 1);
+  quickSort(cli->list, 0, used - 1);
 
   fclose(fcli);
 }
@@ -58,17 +59,17 @@ void arrprodutos(ARR* prod)
     buffer = strsep(&buffer, "\r");
 
     if(produtoValido(buffer)) {
-    prod->list = realloc(prod->list,sizeof(char*) * (used + 1));
+      prod->list = realloc(prod->list,sizeof(char*) * (used + 1));
 
-    prod->list[used] = malloc(SMAX * sizeof(char));
-    strcpy(prod->list[used],buffer);
-    used++;
+      prod->list[used] = malloc(SMAX * sizeof(char));
+      strcpy(prod->list[used],buffer);
+      used++;
     }
   }
 
   prod->used = used;
 
-  //quickSort(prod->list, 0, used - 1);
+  quickSort(prod->list, 0, used - 1);
 
   fclose(fprod);
 }
