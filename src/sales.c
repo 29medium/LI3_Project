@@ -1,7 +1,7 @@
 #include "headers.h"
 
 // Corre uma venda, passa para a struct total e se for válida passa a struct valida
-void saleS(SALES* s, ARR* cli, ARR* prod, char* buffer)
+void saleS(SALES* s, THash4* cli, THash4* prod, char* buffer)
 {
   char *aux = NULL;
 
@@ -28,7 +28,8 @@ void saleS(SALES* s, ARR* cli, ARR* prod, char* buffer)
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].branch = atoi(aux);
 
-  if((binarySearch(prod->list, s->listT[s->usedT].p, 0, prod->used)!=(-1)) && (binarySearch(cli->list, s->listT[s->usedT].c, 0, cli->used)!=(-1)))
+  //if((binarySearch(prod->list, s->listT[s->usedT].p, 0, prod->used)!=(-1)) && (binarySearch(cli->list, s->listT[s->usedT].c, 0, cli->used)!=(-1)))
+  if(procuraHT(prod,s->listT[s->usedT].p) && procuraHT(cli,s->listT[s->usedT].c))
   {
     s->listV = realloc(s->listV,sizeof(SALE) * (s->usedV + 1));
 
@@ -41,12 +42,11 @@ void saleS(SALES* s, ARR* cli, ARR* prod, char* buffer)
     s->listV[s->usedV].branch = s->listT[s->usedT].branch;
     s->usedV++;
   }
-  
 }
 
 // Abre o array das vendas e passa-as para uma struct
 
-void salesToS(SALES* s, ARR* cli, ARR* prod, ARR* sales)
+void salesToS(SALES* s, THash4* cli, THash4* prod, ARR* sales)
 {
   s->usedV = 0;
   s->usedT = 0;

@@ -4,11 +4,9 @@
 #include <string.h>
 #include <math.h>
 
-
 // DEFINE
 #define MAX 64
 #define SMAX 10
-
 
 // STRUCTS
 // Struct para array de vendas, produtos ou clientes
@@ -60,9 +58,10 @@ void arrsales(ARR* sales);
 
 // hash.c
 void TabelaHash4(ARR *a,THash4 *t,int tipo);
+int procuraHT(THash4 *t,char *nome);
 
 // sales.c
-void salesToS(SALES* s, ARR* cli, ARR* prod, ARR* sales);
+void salesToS(SALES* s, THash4* cli, THash4* prod, ARR* sales);
 void salesToF(SALES* val);
 
 // teste.c
