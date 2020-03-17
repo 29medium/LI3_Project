@@ -4,10 +4,10 @@ ODIR=obj
 CC = gcc
 CFLAGS = -O3 -Wall -g -I$(IDIR)
 
-_DEPS = headers.h
+_DEPS = clientes.h produtos.h sales.h sort.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o sales.o arr.o sort.o tests.o hash.o
+_OBJ = main.o clientes.o produtos.o sales.o sort.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)

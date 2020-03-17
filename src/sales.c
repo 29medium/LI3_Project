@@ -1,14 +1,21 @@
-#include "headers.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "sales.h"
+
+#define MAX 64
 
 // Corre uma venda, passa para a struct total e se for válida passa a struct valida
-void saleS(SALES* s, THash4* cli, THash4* prod, char* buffer)
+void saleS(SALES* s, char* buffer, THashP* tprod, THashC* tcli)
 {
   char *aux = NULL;
+  int p, c;
 
   s->listT = realloc(s->listT,sizeof(SALE) * (s->usedT + 1));
 
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].p = aux;
+  p = hashP(buffer[0]);
 
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].price = atof(aux);
@@ -21,6 +28,7 @@ void saleS(SALES* s, THash4* cli, THash4* prod, char* buffer)
 
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].c = aux;
+  c = hashC(buffer[0]);
 
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].month = atoi(aux);
@@ -28,8 +36,8 @@ void saleS(SALES* s, THash4* cli, THash4* prod, char* buffer)
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].branch = atoi(aux);
 
-  //if((binarySearch(prod->list, s->listT[s->usedT].p, 0, prod->used)!=(-1)) && (binarySearch(cli->list, s->listT[s->usedT].c, 0, cli->used)!=(-1)))
-  if(procuraHT(prod,s->listT[s->usedT].p) && procuraHT(cli,s->listT[s->usedT].c))
+  if((binarySearch(tprod->tbl[p].list, s->listT[s->usedT].p, 0, tprod->tbl[p].size)!=(-1))
+  && (binarySearch(tcli->tbl[c].list, s->listT[s->usedT].c, 0, tcli->tbl[c].size)!=(-1)))
   {
     s->listV = realloc(s->listV,sizeof(SALE) * (s->usedV + 1));
 
@@ -44,15 +52,26 @@ void saleS(SALES* s, THash4* cli, THash4* prod, char* buffer)
   }
 }
 
-// Abre o array das vendas e passa-as para uma struct
-
-void salesToS(SALES* s, THash4* cli, THash4* prod, ARR* sales)
+// Passa todas as vendas para um array
+void salesToA(ARR* sales)
 {
-  s->usedV = 0;
-  s->usedT = 0;
+  FILE *fsales = fopen("../files/Vendas_1M.txt", "r");
+  char* buffer= malloc(sizeof(char) * MAX);
+  int used;
 
-  for(int i=0; i<sales->used; i++)
-    saleS(s, cli, prod, sales->list[i]);
+  for(used=0; fgets(buffer,MAX,fsales); used++)
+  {
+    buffer = strsep(&buffer, "\r");
+
+    sales->list = realloc(sales->list,sizeof(char*) * (used + 1));
+
+    sales->list[used] = malloc(MAX * sizeof(char));
+    strcpy(sales->list[used],buffer);
+  }
+
+  sales->used = used;
+
+  fclose(fsales);
 }
 
 // Passa todas as vendas válidas do array para um ficheiro
@@ -72,4 +91,18 @@ void salesToF(SALES* s)
   }
 
   fclose(fsalesv);
+}
+
+// Abre o array das vendas e passa-as para uma struct
+void salesToStructs(SALES* s, ARR* sales, THashP* tprod, THashC* tcli)
+{
+  s->usedV = 0;
+  s->usedT = 0;
+
+  salesToA(sales);
+
+  for(int i=0; i<sales->used; i++)
+    saleS(s, sales->list[i], tprod, tcli);
+
+  salesToF(s);
 }
