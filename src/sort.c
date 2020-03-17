@@ -1,4 +1,5 @@
-#include "headers.h"
+//#include "headers.h"
+#include <string.h>
 
 // Troca duas posições de um array
 void swap(char** a, char** b)

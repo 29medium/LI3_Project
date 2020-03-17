@@ -15,7 +15,7 @@ void saleS(SALES* s, char* buffer, THashP* tprod, THashC* tcli)
 
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].p = aux;
-  p = hashP(buffer[0]);
+  p = hashP(aux[0]);
 
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].price = atof(aux);
@@ -28,7 +28,7 @@ void saleS(SALES* s, char* buffer, THashP* tprod, THashC* tcli)
 
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].c = aux;
-  c = hashC(buffer[0]);
+  c = hashC(aux[0]);
 
   aux = strsep(&buffer, " ");
   s->listT[s->usedT].month = atoi(aux);
@@ -37,7 +37,7 @@ void saleS(SALES* s, char* buffer, THashP* tprod, THashC* tcli)
   s->listT[s->usedT].branch = atoi(aux);
 
   if((binarySearch(tprod->tbl[p].list, s->listT[s->usedT].p, 0, tprod->tbl[p].size)!=(-1))
-  && (binarySearch(tcli->tbl[c].list, s->listT[s->usedT].c, 0, tcli->tbl[c].size)!=(-1)))
+  &&(binarySearch(tcli->tbl[c].list, s->listT[s->usedT].c, 0, tcli->tbl[c].size)!=(-1)))
   {
     s->listV = realloc(s->listV,sizeof(SALE) * (s->usedV + 1));
 
@@ -50,6 +50,8 @@ void saleS(SALES* s, char* buffer, THashP* tprod, THashC* tcli)
     s->listV[s->usedV].branch = s->listT[s->usedT].branch;
     s->usedV++;
   }
+
+  s ->usedT++;
 }
 
 // Passa todas as vendas para um array
@@ -94,7 +96,7 @@ void salesToF(SALES* s)
 }
 
 // Abre o array das vendas e passa-as para uma struct
-void salesToStructs(SALES* s, ARR* sales, THashP* tprod, THashC* tcli)
+void salesToStructs(ARR* sales,SALES*s, THashP* tprod, THashC* tcli)
 {
   s->usedV = 0;
   s->usedT = 0;
@@ -105,4 +107,5 @@ void salesToStructs(SALES* s, ARR* sales, THashP* tprod, THashC* tcli)
     saleS(s, sales->list[i], tprod, tcli);
 
   salesToF(s);
+
 }

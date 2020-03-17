@@ -8,7 +8,7 @@
 
 int hashP(char c)
 {
-  return c - 65;
+  return c - 65 ;
 }
 
 void initTblP(THashP* tprod)
@@ -27,10 +27,11 @@ int prodVal(char *prod)
 {
   int i;
 
-  if(strlen(prod) < 5 || prod[0] < 'A' || prod[0] > 'Z' || prod[1] < '1' || prod[1] > '5')
+  if(strlen(prod) < 5 || prod[0] < 'A' || prod[0] > 'Z' || prod[1] < 'A' ||
+    prod[1] > 'Z' || prod[2] < '1')
     return 0;
 
-  for(i = 2; i < 5; i++)
+  for(i = 2; i < 6; i++)
     if(prod[i] < '0' || prod[i] > '9')
       return 0;
 
@@ -41,7 +42,7 @@ void tblProd(THashP* tprod)
 {
   FILE* fcli = fopen("../files/Produtos.txt", "r");
   char* buffer= malloc(sizeof(char) * MAX);
-  int i, pos, used = 0;
+  int i, pos;
 
   initTblP(tprod);
 
@@ -52,9 +53,10 @@ void tblProd(THashP* tprod)
     if(prodVal(buffer))
     {
       i = hashP(buffer[0]);
+
       pos = tprod->tbl[i].size;
 
-      tprod->tbl[i].list = realloc(tprod->tbl[i].list,sizeof(char*) * (used + 1));
+      tprod->tbl[i].list = realloc(tprod->tbl[i].list,sizeof(char*) * (pos + 1));
 
       tprod->tbl[i].list[pos] = malloc(sizeof(char) * MAX);
       strcpy(tprod->tbl[i].list[pos],buffer);
