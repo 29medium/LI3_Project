@@ -1,0 +1,5 @@
+program
+/docs/html
+/obj/*.o
+/files/Vendas_3M.txt
+/files/Vendas_5M.txt

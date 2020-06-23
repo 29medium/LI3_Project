@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7d9a260-62ee-47be-913f-994f23ac6e51" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_05_2020,_14_28_[Default_Changelist]/IApresentacao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_05_2020,_14_28_[Default_Changelist]/Interpretador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_05_2020,_14_28_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_05_2020__14_28__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_20,_14_57_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_20__14_57__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_20,_18_50_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_05_20__18_50__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_20,_13_24_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_20__13_24__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Controller/Crono.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Controller/Crono.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Controller/Interpretador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Controller/Interpretador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/Catalogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/Catalogo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/CliInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/CliInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/DataFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/DataFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/FactMF.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/FactMF.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/Faturacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/Faturacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/Filial.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/Filial.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/GestVendas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/GestVendas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/GestaoFiliais.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/GestaoFiliais.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/ICatalogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/ICatalogo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/IFaturacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/IFaturacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/IGestVendas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/IGestVendas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/IGestaoFiliais.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/IGestaoFiliais.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/LoadInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/LoadInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/ParStringFloat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/ParStringFloat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/ProdCliinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/ProdCliinfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/ProdInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/ProdInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/sortCliByTotalFact.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/sortCliByTotalFact.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/Model/sortParbyValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/Model/sortParbyValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/View/Apresentacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/View/Apresentacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projJava/View/IApresentacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projJava/View/IApresentacao.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="module-info" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1c8Fj2TQojo9nh2mxu8jen24GJk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="projJava" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="melhoramento interpretador e encapsulamento">
+      <created>1589755181422</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589755181422</updated>
+    </task>
+    <task id="LOCAL-00002" summary="melhoramento interpretador e encapsulamento">
+      <created>1589755321878</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589755321878</updated>
+    </task>
+    <task id="LOCAL-00003" summary="melhoramento interpretador e encapsulamento">
+      <created>1589755499813</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589755499813</updated>
+    </task>
+    <task id="LOCAL-00004" summary="melhoramento interpretador e encapsulamento">
+      <created>1589755872494</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589755872494</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Correção conflitos&#10;Melhorias Menus">
+      <created>1589986574520</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589986574520</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Melhorias Menus">
+      <created>1589989312279</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589989312279</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Melhorias Menus">
+      <created>1589989959052</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589989959052</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7d9a260-62ee-47be-913f-994f23ac6e51" name="Default Changelist" comment="" />
+      <created>1590174474414</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590174474414</updated>
+      <workItem from="1590174481715" duration="1357000" />
+      <workItem from="1590252831009" duration="247000" />
+      <workItem from="1590272405716" duration="318000" />
+      <workItem from="1590341851383" duration="10232000" />
+      <workItem from="1590531570600" duration="4305000" />
+      <workItem from="1590589418248" duration="5256000" />
+      <workItem from="1590596796458" duration="199000" />
+      <workItem from="1590797788456" duration="8114000" />
+      <workItem from="1592828964651" duration="828000" />
+      <workItem from="1592850487363" duration="130000" />
+      <workItem from="1592902942216" duration="217000" />
+    </task>
+    <task id="LOCAL-00008" summary="MVC">
+      <created>1590342564673</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342564673</updated>
+    </task>
+    <task id="LOCAL-00009" summary="MVC">
+      <created>1590342653297</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342653297</updated>
+    </task>
+    <task id="LOCAL-00010" summary="MVC + interfaces">
+      <created>1590343645676</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590343645676</updated>
+    </task>
+    <task id="LOCAL-00011" summary="MVC + interfaces">
+      <created>1590343955633</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590343955633</updated>
+    </task>
+    <task id="LOCAL-00012" summary="remocao classe consultas estatisticas">
+      <created>1590347588058</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1590347588058</updated>
+    </task>
+    <task id="LOCAL-00013" summary="documentacao classe GFiliais">
+      <created>1590507363170</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1590507363170</updated>
+    </task>
+    <task id="LOCAL-00014" summary="correcao de algumas queries">
+      <created>1590513121145</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1590513121145</updated>
+    </task>
+    <task id="LOCAL-00015" summary="correcao de algumas queries">
+      <created>1590531847582</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1590531847582</updated>
+    </task>
+    <task id="LOCAL-00016" summary="tabela">
+      <created>1590709395153</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1590709395153</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="melhoramento interpretador e encapsulamento" />
+    <MESSAGE value="Correção conflitos&#10;Melhorias Menus" />
+    <MESSAGE value="Melhorias Menus" />
+    <MESSAGE value="MVC" />
+    <MESSAGE value="MVC + interfaces" />
+    <MESSAGE value="remocao classe consultas estatisticas" />
+    <MESSAGE value="documentacao classe GFiliais" />
+    <MESSAGE value="correcao de algumas queries" />
+    <MESSAGE value="tabela" />
+    <option name="LAST_COMMIT_MESSAGE" value="tabela" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="863" y="421" width="251" height="263" key="#Notifications" timestamp="1589755395318">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="863" y="421" width="251" height="263" key="#Notifications/67.27.1853.1053@67.27.1853.1053" timestamp="1589755395318" />
+    <state x="476" y="130" width="1024" height="845" key="#Project_Structure" timestamp="1590272657663">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="476" y="130" width="1024" height="845" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1590272657663" />
+    <state x="287" y="176" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1590342468359">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="171" y="138" key="#com.intellij.ide.util.MemberChooser/0.23.1440.813@0.23.1440.813" timestamp="1589759742959" />
+    <state x="287" y="176" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1590342468359" />
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590350456962">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1590350456962" />
+    <state x="723" y="279" width="530" height="577" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590928643082">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="723" y="279" width="530" height="577" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1853.1053@67.27.1853.1053" timestamp="1590928643082" />
+    <state x="354" y="80" width="846" height="552" key="CommitChangelistDialog2" timestamp="1590709394974">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state x="354" y="80" key="CommitChangelistDialog2/0.23.1440.814@0.23.1440.814" timestamp="1590709394974" />
+    <state x="354" y="80" width="846" height="552" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1590690009660" />
+    <state x="354" y="80" width="846" height="707" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1589989958843" />
+    <state x="523" y="100" width="931" height="905" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1590531847423" />
+    <state x="242" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1590342680017">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="242" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1590342680017" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1590927930955">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1590927930955" />
+    <state width="1750" height="675" key="GridCell.Tab.0.bottom" timestamp="1592829953365">
+      <screen x="0" y="23" width="1792" height="1040" />
+    </state>
+    <state width="1398" height="662" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1590602279384" />
+    <state width="1398" height="662" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1590709269644" />
+    <state width="1398" height="641" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1589990266443" />
+    <state width="1398" height="662" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1590691017550" />
+    <state width="1398" height="641" key="GridCell.Tab.0.bottom/0.23.1440.822@0.23.1440.822" timestamp="1589947465321" />
+    <state width="1750" height="393" key="GridCell.Tab.0.bottom/0.23.1792.1033@0.23.1792.1033" timestamp="1590859777150" />
+    <state width="1750" height="675" key="GridCell.Tab.0.bottom/0.23.1792.1040@0.23.1792.1040" timestamp="1592829953365" />
+    <state width="1807" height="847" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590928660484" />
+    <state width="1750" height="675" key="GridCell.Tab.0.center" timestamp="1592829953364">
+      <screen x="0" y="23" width="1792" height="1040" />
+    </state>
+    <state width="1398" height="662" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1590602279383" />
+    <state width="1398" height="662" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1590709269643" />
+    <state width="1398" height="641" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1589990266442" />
+    <state width="1398" height="662" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1590691017548" />
+    <state width="1398" height="641" key="GridCell.Tab.0.center/0.23.1440.822@0.23.1440.822" timestamp="1589947465320" />
+    <state width="1750" height="393" key="GridCell.Tab.0.center/0.23.1792.1033@0.23.1792.1033" timestamp="1590859777149" />
+    <state width="1750" height="675" key="GridCell.Tab.0.center/0.23.1792.1040@0.23.1792.1040" timestamp="1592829953364" />
+    <state width="1807" height="847" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590928660481" />
+    <state width="1750" height="675" key="GridCell.Tab.0.left" timestamp="1592829953364">
+      <screen x="0" y="23" width="1792" height="1040" />
+    </state>
+    <state width="1398" height="662" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1590602279382" />
+    <state width="1398" height="662" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1590709269641" />
+    <state width="1398" height="641" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1589990266442" />
+    <state width="1398" height="662" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1590691017547" />
+    <state width="1398" height="641" key="GridCell.Tab.0.left/0.23.1440.822@0.23.1440.822" timestamp="1589947465320" />
+    <state width="1750" height="393" key="GridCell.Tab.0.left/0.23.1792.1033@0.23.1792.1033" timestamp="1590859777148" />
+    <state width="1750" height="675" key="GridCell.Tab.0.left/0.23.1792.1040@0.23.1792.1040" timestamp="1592829953364" />
+    <state width="1807" height="847" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590928660479" />
+    <state width="1750" height="675" key="GridCell.Tab.0.right" timestamp="1592829953365">
+      <screen x="0" y="23" width="1792" height="1040" />
+    </state>
+    <state width="1398" height="662" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1590602279383" />
+    <state width="1398" height="662" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1590709269643" />
+    <state width="1398" height="641" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1589990266443" />
+    <state width="1398" height="662" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1590691017550" />
+    <state width="1398" height="641" key="GridCell.Tab.0.right/0.23.1440.822@0.23.1440.822" timestamp="1589947465320" />
+    <state width="1750" height="393" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1590859777149" />
+    <state width="1750" height="675" key="GridCell.Tab.0.right/0.23.1792.1040@0.23.1792.1040" timestamp="1592829953365" />
+    <state width="1807" height="847" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590928660482" />
+    <state width="1807" height="334" key="GridCell.Tab.1.bottom" timestamp="1590591114168">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590591114168" />
+    <state width="1807" height="334" key="GridCell.Tab.1.center" timestamp="1590591114167">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590591114167" />
+    <state width="1807" height="334" key="GridCell.Tab.1.left" timestamp="1590591114167">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590591114167" />
+    <state width="1807" height="334" key="GridCell.Tab.1.right" timestamp="1590591114167">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="334" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590591114167" />
+    <state x="253" y="98" width="1482" height="872" key="MergeDialog" timestamp="1590501444128">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="145" y="79" key="MergeDialog/0.23.1440.823@0.23.1440.823" timestamp="1589936243590" />
+    <state x="180" y="93" key="MergeDialog/0.23.1792.1033@0.23.1792.1033" timestamp="1589986195688" />
+    <state x="253" y="98" width="1482" height="872" key="MergeDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1590501444128" />
+    <state x="351" y="72" width="1024" height="845" key="SettingsEditor" timestamp="1590927897288">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="221" y="58" key="SettingsEditor/0.23.1440.813@0.23.1440.813" timestamp="1589760877445" />
+    <state x="351" y="72" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1590927897288" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1590589421101">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/67.27.1853.1053@67.27.1853.1053" timestamp="1590589421101" />
+    <state x="588" y="288" width="876" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590930085983">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="405" y="225" key="Vcs.Push.Dialog.v2/0.23.1440.814@0.23.1440.814" timestamp="1590709396670" />
+    <state x="405" y="227" key="Vcs.Push.Dialog.v2/0.23.1440.822@0.23.1440.822" timestamp="1589989960260" />
+    <state x="504" y="279" key="Vcs.Push.Dialog.v2/0.23.1792.1033@0.23.1792.1033" timestamp="1589986576358" />
+    <state x="588" y="288" width="876" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590930085983" />
+    <state x="764" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589755483482">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="764" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1589755483482" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1590593766078">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1590593766078" />
+  </component>
+</project>
